@@ -49,6 +49,8 @@ int optimal(vector<int>& nums,int k){
     return atmost(nums,k) - atmost(nums,k-1);
 }
 
+//TC-O(N)  SC-O(1)
+
 int main(){
     vector<int> nums={1,1,2,1,1};
     int k=3;
