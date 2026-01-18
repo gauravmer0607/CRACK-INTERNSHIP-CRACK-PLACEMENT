@@ -36,11 +36,11 @@ int optimal(string &s,int k){
     int left=0;
     int right=0;
     unordered_map<char,int> mpp;
-    int maxlen=0,maxel=0;
+    int maxlen=0,maxfreq=0;
     while(right<n){
         mpp[s[right]]++;
-        maxel=max(maxel,mpp[s[right]]);
-        while((right-left+1)-maxel>k){
+        maxfreq=max(maxfreq,mpp[s[right]]);
+        while((right-left+1)-maxfreq>k){
             mpp[s[left]]--;
             left++;
         }
